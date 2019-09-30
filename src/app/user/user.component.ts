@@ -1,3 +1,4 @@
+import { AddDocumentComponent } from './../add-document/add-document.component';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
