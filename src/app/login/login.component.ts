@@ -1,5 +1,7 @@
+import { LoggerService } from '../services/logger.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -9,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   title = 'DocFile Mockup';
-  constructor(private router: Router) { }
+  constructor(private router: Router, private logger: LoggerService) { }
 
   username: string;
   password: string;
@@ -18,6 +20,7 @@ export class LoginComponent implements OnInit {
   }
 
   login(): void {
+      this.logger.log('username entered: ' + this.username + '\npassword entered: ' + this.password);
     if (this.username == 'admin' && this.password == 'admin'){
       this.router.navigate(['user']);
     } else {

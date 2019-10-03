@@ -1,5 +1,5 @@
-import { AddDocumentComponent } from './../add-document/add-document.component';
 import { Component, OnInit } from '@angular/core';
+import { Hero } from './hero';
 
 @Component({
   selector: 'app-user',
@@ -8,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
   title = 'DocFile Mockup';
-  constructor() { }
+  heroes = [
+    new Hero(1, 'Windstorm'),
+    new Hero(2, 'Magneta'),
+    new Hero(3, 'Volcano'),
+    new Hero(4, 'Destructo')
+  ];
+
+  customerInput: any;
+
+  constructor() { console.log(this.customerInput); }
 
   ngOnInit() {
+
   }
 
 }

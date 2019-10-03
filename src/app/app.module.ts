@@ -1,5 +1,3 @@
-import { DocumentHeaderComponent } from './document-header/document-header.component';
-import { AddDocumentComponent } from './add-document/add-document.component';
 import { CustomMaterialModule } from './core/material.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,8 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
 import { FormsModule } from '@angular/forms';
-import { DialogBoxComponent } from './dialog-box/dialog-box.component';
-import { HighlightDirective } from './highlight.directive';
+
+
 
 @NgModule({
   declarations: [
@@ -20,10 +18,7 @@ import { HighlightDirective } from './highlight.directive';
     NavbarComponent,
     LoginComponent,
     UserComponent,
-    AddDocumentComponent,
-    DocumentHeaderComponent,
-    DialogBoxComponent,
-    HighlightDirective
+
   ],
   imports: [
     BrowserModule,
@@ -33,7 +28,7 @@ import { HighlightDirective } from './highlight.directive';
     FormsModule
   ],
   entryComponents: [
-    DialogBoxComponent
+
   ],
   providers: [],
   bootstrap: [AppComponent]
